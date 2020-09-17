@@ -1,0 +1,33 @@
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyApp</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/resetStylesheet.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/myApp.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/myFirstNavigationBar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/myFirstSearchBox.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/myFirstContentArea.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/myDropdownMenu.css' %}">
+
+    <!-- Scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{% static 'js/loadOnScrollDown.js' %}"></script>
+    <script>
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        }
+    </script>
+</head>
+
+<body>
+    {% include 'navBar.html' %}
+    <div class="content-containter" id="contentWrapper">
+        {% include 'content.html' %}
+    </div>
+    <br><p align="center" id="loading">Loading !!!</p><br>
+</body>

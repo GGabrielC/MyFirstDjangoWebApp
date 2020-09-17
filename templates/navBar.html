@@ -1,0 +1,20 @@
+<nav class="nav-wrapper">
+    <div>
+        <ul>
+            <li>{% include 'logo.html' %}</li>
+
+            <li style='width:100%'>
+                <form accept-charset="utf-8" action="" class="search-box" method="GET">
+                    <input type="submit" class="search-button" value="Go :" tabindex="1">
+                    <input type="text" value=""  placeholder="Search ..." class="search-input" tabindex="0">
+                </form>
+            </li>
+
+            {% if not user.is_authenticated %}
+                <li><a class="register" href="accounts/register.html">Register</a></li>
+                <li><a class="login" href="accounts/login.html">Login</a></li>
+            {% endif %}
+            {% include 'myDropdownMenu.html' %}
+        </ul>
+    </div>
+</nav>

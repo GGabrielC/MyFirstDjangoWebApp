@@ -1,0 +1,12 @@
+<div class="dropdownMenu">
+    <button class="dropdownTrigger">Menu</button>
+    <div class="dropdownContent">
+        <a href="">Home</a>
+        {% if user.is_authenticated %}
+            <a href="accounts/logout.html">Logout</a>
+        {% else %}
+            <a href="accounts/register.html">Register</a>
+            <a href="accounts/login.html">Login</a>
+        {% endif %}
+    </div>
+</div>

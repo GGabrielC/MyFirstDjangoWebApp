@@ -1,0 +1,45 @@
+.content-containter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-element {
+    width: 25%;
+    background-color: lightgray;
+    border-radius: 0px 0px 85px 0px;
+}
+
+@media (max-width: 1023px) {
+    .content-element {
+        width: 33%;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-element {
+        width: 50%;
+    }
+}
+
+@media (max-width: 384px) {
+    .content-element {
+        width: 100%;
+    }
+}
+
+.content-element img{
+    width: 99%;
+    transition: 0.5s;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.content-element img:hover{
+    opacity: 0.5;
+}
+
+.contentContainer iframe{
+    width: 100%;
+}
